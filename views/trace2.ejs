@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to <%= title %></h1>
+    <p>Please input the lot id to trace:</p>
+    <p>
+    <%
+      var list = '';
+      if (traceresult.length > 0) { 
+        list += '<h1>Trace result:</h1>';
+        list += '<img src="images/TomatoJuice1L.png" alt="TomatoJuice">';
+
+        list += '<div class="table-users">';
+        list += '<div class="header">Trace Result</div>'
+        list += '<table cellspacing="0"><tr>';
+        list += '<th>Facility Name</th>';
+        list += '<th>Facility Type</th>';
+        list += '<th>Facility Address</th>';          
+        list += '<th>Timestamp</th></tr>';
+
+        for (i = 0; i < traceresult.length; i++) {
+          list += '<tr>';
+          list += '<td>' + traceresult[i].facility_name + '</td>';
+          list += '<td>' + traceresult[i].facility_type + '</td>';
+          list += '<td>' + traceresult[i].facility_address + '</td>';
+          list += '<td>' + traceresult[i].timestamp + '</td>';
+          list += '</tr>';
+        }
+        list += '</table></div>';
+      } 
+      
+      return list;
+    %>
+    </p>
+  </body>
+</html>

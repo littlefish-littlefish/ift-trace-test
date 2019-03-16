@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <%
+      if (traceresult.length > 0) { 
+    %>
+    <img src="images/TomatoJuice1L.png" alt="TomatoJuice">
+    <div class="table-users">
+      <div class="header">Trace Result</div>
+      <table cellspacing="0">
+        <tr>
+            <th>Facility Name</th>
+            <th>Facility Type</th>
+            <th>Facility Address</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr>
+
+    <%
+
+        for (i = 0; i < traceresult.length; i++) { %>
+          <tr>
+          <td><%= traceresult[i].facility_name %></td>
+          <td><%= traceresult[i].facility_type %></td>
+          <td><%= traceresult[i].facility_address %></td>
+          <td><%= traceresult[i].timestamp %></td>
+        </tr>
+        <% } %>
+      </table></div>
+      <%
+      } 
+    %>
+  </body>
+</html>
