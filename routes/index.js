@@ -70,7 +70,7 @@ router.get('/trace', function(req, res) {
     "facility_type": "Warehouse and or depot",
     "facility_address": "1 Main Street, Prosotsani, Prosotsani, GR",
     "timestamp": "2018-03-08T11:00:00Z",
-    "image": "images/ConcentratePlant2.png",
+    "image": "images/Warehouse1.png",
     "event": "Produce concentrate"
   }, {
     "_id"  :  "CCH0001-0007", 
