@@ -6,18 +6,23 @@
   </head>
   <body>
 
+    <div>
+      <p style="float: center;"><img src="images/TomatoJuice1L.png" height="200px" width="200px" class="center" border="1px"><p>
+      <p><center><h2>Trace lot <%= lotid %></h2></center></p>
+  </div>
+  
     <%
       if (traceresult.length > 0) { 
     %>
-    <img src="images/TomatoJuice1L.png" alt="TomatoJuice">
     <div class="table-users">
       <div class="header">Trace Result</div>
       <table cellspacing="0">
         <tr>
+            <th>Image</th>
             <th>Facility Name</th>
-            <th>Facility Type</th>
             <th>Facility Address</th>
             <th>Timestamp</th>
+            <th>Event</th>
         </tr>
         <tr>
 
@@ -25,12 +30,14 @@
 
         for (i = 0; i < traceresult.length; i++) { %>
           <tr>
+          <td><img src="<%= traceresult[i].image %>"></td>
           <td><%= traceresult[i].facility_name %></td>
-          <td><%= traceresult[i].facility_type %></td>
           <td><%= traceresult[i].facility_address %></td>
           <td><%= traceresult[i].timestamp %></td>
+          <td><%= traceresult[i].event %></td>
         </tr>
         <% } %>
+
       </table></div>
       <%
       } 
