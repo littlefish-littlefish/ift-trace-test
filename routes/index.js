@@ -58,7 +58,7 @@ router.get('/trace', function(req, res) {
   }, {
     "_id"  :  "CCH0001-0005", 
     "facility_name": "Concentrate Plant 1",
-    "facility_type": "Manufactureing plant",
+    "facility_type": "Processing plant",
     "facility_address": "1 Main Street, Prosotsani, Prosotsani, GR",
     "timestamp": "2018-03-04T10:00:00Z",
     "image": "images/ConcentratePlant1.png",
@@ -74,7 +74,7 @@ router.get('/trace', function(req, res) {
     "event": "Produce concentrate"
   }, {
     "_id"  :  "CCH0001-0007", 
-    "facility_name": "Manufacture Plant 1",
+    "facility_name": "Juice Plant 1",
     "facility_type": "Manufacturing plant",
     "facility_address": "1 Main Street, Prosotsani, Prosotsani, GR",
     "timestamp": "2018-03-11T10:00:00Z",
@@ -101,15 +101,15 @@ router.get('/trace', function(req, res) {
   }, {
     "_id"  :  "CCH0001-0003", 
     "facility_name": "Concentrate Plant 2",
-    "facility_type": "Manufactureing plant",
+    "facility_type": "Processing plant",
     "facility_address": "1 Main Street, Zaragoza, Zaragoza, ES",
     "timestamp": "2018-03-04T12:00:00Z",
     "image": "images/ConcentratePlant2.png",
     "event": "Produce concentrate"
   }, {
     "_id"  :  "CCH0001-0004", 
-    "facility_name": "Manufacture Plant 2",
-    "facility_type": "Manufacturing plant",
+    "facility_name": "Juice Plant 2",
+    "facility_type": "Manufacture plant",
     "facility_address": "1 Main Street, Zaragoza, Zaragoza, ES",
     "timestamp": "2018-03-11T11:00:00Z",
     "image": "images/TomatoJuicePlant2.png",
