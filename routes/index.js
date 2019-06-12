@@ -116,6 +116,33 @@ router.get('/trace', function(req, res) {
     "event": "Produce juice"
   }];
 
+  var trace_drug = [{ 
+    "_id"  :  "DRUG0001-0001", 
+    "facility_name": "Manu Plant 1",
+    "facility_type": "Manufacture Plant",
+    "facility_address": "1 Manu Street, Newark, NJ, US",
+    "timestamp": "2018-05-01T08:00:00Z",
+    "image": "images/drugPlant1.jpeg",
+    "event": "Produce drug"
+  }, {
+    "_id"  :  "DRUG0001-0002", 
+    "facility_name": "Distributor Warehouse 1",
+    "facility_type": "Warehouse",
+    "facility_address": "1 Main Street, Queens, NY, US",
+    "timestamp": "2018-05-04T08:00:00Z",
+    "image": "images/drugWarehouse1.jpeg",
+    "event": "Distribute drug"
+  }, {
+    "_id"  :  "DRUG0001-0003", 
+    "facility_name": "Store 1",
+    "facility_type": "Store",
+    "facility_address": "1 Main Street, New York, NY, NY",
+    "timestamp": "2018-05-07T08:00:00Z",
+    "image": "images/drugStore1.jpeg",
+    "event": "Dispense drug"
+  }];
+
+
   // get the lot id from request
   var lotid = req.query["lotid"];
   var traceresult = [];
@@ -123,7 +150,10 @@ router.get('/trace', function(req, res) {
     traceresult = trace1;
   } else if (lotid === "TomatoJuice1Lx12") {
     traceresult = trace2;
+  } else if (lotid === "Tylenol-T0001.L01_S01") {
+    traceresult = trace_drug;
   }
+  
   //console.log('lotid:' + lotid + ', result:' + traceresult + ', length:' + traceresult.length);
   //res.json(traceresult);
   //res.render('trace', { title: lotid});
